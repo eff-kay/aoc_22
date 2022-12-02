@@ -20,7 +20,7 @@ def compute(data):
     st = {'X':'loose', 'Y':'draw', 'Z':'win'}
 
     total_score = 0
-    for first, sec in inp:
+    for first, sec in inp[:-1]:
 
         if st[sec]=='loose':
             sv = b_map[a_rev[first]]

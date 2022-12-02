@@ -17,7 +17,7 @@ def compute(data):
     inp = [x.split(' ') for x in inp]
 
     total_score = 0
-    for first, sec in inp:
+    for first, sec in inp[:-1]:
         if a[first] == a_map[sec]:
             total_score += 6
         elif b[sec] == b_map[first]:
