@@ -7,7 +7,7 @@ INPUT_TXT = os.path.join(os.path.dirname(__file__), 'input.txt')
 
 def compute(data):
     inp = data.split("\n\n")
-    inp = [x.rstrip().split('\n') for x in inp]
+    inp = [x.splitlines() for x in inp]
     inp  = max([sum(list(map(int, x))) for x in inp])
     return inp
 
