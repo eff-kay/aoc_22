@@ -5,11 +5,7 @@ import re
 
 
 # increase the recursion depth in python
-import sys
-sys.setrecursionlimit(10000)
-
 INPUT_TXT = os.path.join(os.path.dirname(__file__), 'input.txt')
-
 
 def compute(data):
     inp = data.splitlines()
