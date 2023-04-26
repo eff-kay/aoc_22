@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Advent of Code Rankings</title>
+  <style>#upload-form {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    }
+    
+    #upload-form label {
+    margin-right: 10px;
+    }
+    
+    #rankings-table {
+    width: 100%;
+    border-collapse: collapse;
+    }
+    
+    #rankings-table th,
+    #rankings-table td {
+    padding: 8px;
+    border: 1px solid #ccc;
+    }
+    
+    #rankings-table th {
+    background-color: #eee;
+    }</style>
+</head>
+<body>
+  <h1>Advent of Code Rankings</h1>
+  <form id="upload-form">
+    <label for="json-file">Upload JSON file:</label>
+    <input type="file" id="json-file" accept=".json">
+    <button type="submit">Submit</button>
+  </form>
+  <table id="rankings-table">
+    <thead>
+      <tr>
+        <th>Rank</th>
+        <th>Player</th>
+        <th>Language</th>
+        <th>Time</th>
+        <th>Points</th>
+      </tr>
+    </thead>
+    <tbody id="rankings-body">
+    </tbody>
+  </table>
+
+  <script>
+//     const form = document.getElementById('upload-form');
+// const rankingsBody = document.getElementById('rankings-body');
+
+// form.addEventListener('submit', (event) => {
+//     event.preventDefault();
+
+//     // Read the JSON file
+//     const file = document.getElementById('json-file').files[0];
+//     const reader = new FileReader();
+//     reader.onload = (event) => {
+//         const json = JSON.parse(event.target.result);
+//     // Calculate the points and rankings
+//     const rankings = [];
+//     const usedLanguages = new Set();
+//     json.forEach((player) => {
+//     if (!usedLanguages.has(player.language)) {
+//         rankings.push({
+//         player: player.name,
+//         language: player.language,
+//         time: player.time,
+//         points: json.length + usedLanguages.size + 1,
+//         });
+//         usedLanguages.add(player.language);
+//     } else {
+//         rankings.push({
+//         player: player.name,
+//         language: player.language,
+//         time: player.time,
+//         points: json.length - usedLanguages.size,
+//         });
+//     }
+//     });
+// })
+
+// // Sort the rankings by points in descending order
+// rankings.sort((a, b) => b.points - a.points);
+
+// // Display the rankings in the table
+// rankingsBody.innerHTML = '';
+  </script>
+</body>
+</html>
